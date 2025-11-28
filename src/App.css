@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  font-family: "Pretendard", sans-serif;
+  background: #f5f6f7;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 18px;
+  color: #555;
+}
+
+.game-section {
+  margin-bottom: 60px;
+}
+
+.game-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.game-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  transition: transform 0.15s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-3px);
+}
+
+.game-card h3 {
+  margin: 0 0 10px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #777;
+}
