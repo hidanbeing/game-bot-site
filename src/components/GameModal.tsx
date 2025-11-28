@@ -1,6 +1,12 @@
 import "./GameModal.css";
 import ReactionSpeedGame from "../games/ReactionSpeedGame";
 import "../games/ReactionSpeedGame.css";
+import TypingBattleGame from "../games/TypingBattleGame";
+import "../games/TypingBattleGame.css";
+import PictureQuizGame from "../games/PictureQuizGame";
+import "../games/PictureQuizGame.css";
+import ColorMatchGame from "../games/ColorMatchGame";
+import "../games/ColorMatchGame.css";
 
 interface Game {
   title: string;
@@ -18,7 +24,12 @@ const renderGame = (game: Game) => {
   switch (game.gameId) {
     case "reaction-speed":
       return <ReactionSpeedGame />;
-    // Add other games here in the future
+    case "typing-battle":
+      return <TypingBattleGame />;
+    case "picture-quiz":
+      return <PictureQuizGame />;
+    case "color-match":
+      return <ColorMatchGame />;
     default:
       return <p>게임을 불러올 수 없습니다.</p>;
   }

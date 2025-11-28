@@ -1,14 +1,26 @@
 /* 라이트모드 고정 */
+:root {
+  --primary-color: #6e48aa;
+  --primary-hover-color: #5a3a8a;
+  --background-color: #f4f7f6;
+  --card-background-color: #ffffff;
+  --text-color: #333333;
+  --subtle-text-color: #666666;
+  --border-color: #e0e0e0;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+  --shadow-hover-color: rgba(0, 0, 0, 0.12);
+}
+
 body {
   margin: 0;
   font-family: "Pretendard", sans-serif;
-  background: #fafafa;
-  color: #222;
+  background: var(--background-color);
+  color: var(--text-color);
 }
 
 /* 레이아웃 */
 .container {
-  max-width: 900px;
+  max-width: 960px;
   margin: auto;
   padding: 40px 20px;
 }
@@ -16,74 +28,80 @@ body {
 /* 헤더 */
 .header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .header h1 {
-  font-size: 48px;
-  font-weight: 700;
-  color: #222;
+  font-size: 56px;
+  font-weight: 800;
+  background: linear-gradient(45deg, var(--primary-color), #a96fde);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
 }
 
 .header p {
-  font-size: 18px;
-  color: #666;
+  font-size: 20px;
+  color: var(--subtle-text-color);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .games h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: var(--text-color);
 }
 
 /* 카드 */
 .game-card {
-  background: white;
-  border: 1px solid #e5e5e5;
-  border-radius: 16px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: 0.2s ease;
+  background: var(--card-background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 5px 15px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
 }
 
 .game-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px var(--shadow-hover-color);
 }
 
 .game-title {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 8px;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
   display: flex;
   align-items: center;
+  color: var(--text-color);
 }
 
 .emoji {
-  font-size: 26px;
-  margin-right: 8px;
+  font-size: 30px;
+  margin-right: 12px;
+  background: linear-gradient(45deg, var(--primary-color), #a96fde);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .game-desc {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #555;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--subtle-text-color);
 }
 
 /* 푸터 */
 .footer {
   text-align: center;
-  margin-top: 50px;
-  color: #999;
+  margin-top: 60px;
+  color: #aaaaaa;
   font-size: 14px;
 }
 
 .game-card-clickable {
   cursor: pointer;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-}
-
-.game-card-clickable:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
 }
